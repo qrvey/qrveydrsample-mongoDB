@@ -1,0 +1,10 @@
+{
+  "mongodburl": "",
+  "mongodbcollection": "",
+  "mongodbdatabase": "",
+  "mongodbquery": {},
+  "s3Bucket": "",
+  "metadataId": "",
+  "postdataurl": "",
+  "apikey": ""
+}

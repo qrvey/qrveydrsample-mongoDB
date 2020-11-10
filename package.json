@@ -1,0 +1,26 @@
+{
+  "name": "qrveydrsample-mongodb",
+  "version": "1.0.0",
+  "description": "This is a sample to load data to Qrvey from mongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrvey/qrveydrsample-mongoDB.git"
+  },
+  "author": "Qrvey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qrvey/qrveydrsample-mongoDB/issues"
+  },
+  "homepage": "https://github.com/qrvey/qrveydrsample-mongoDB#readme",
+  "dependencies": {
+    "aws-sdk": "^2.788.0",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "mongodb": "^3.6.3",
+    "uuid": "^8.3.1"
+  }
+}
