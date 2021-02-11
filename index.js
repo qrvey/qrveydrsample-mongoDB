@@ -6,12 +6,13 @@ const https = require("https");
 const s3 = new AWS.S3();
 
 const config = require("./config.json");
+const options = {};
 
 //Use this code if your mongoDB use a certificate to connect
 /*
 const certFileBuf = fs.readFileSync('./ca.pfx');
 
-const options = {
+options = {
     sslCA: certFileBuf,
     useUnifiedTopology: true
 }*/
@@ -112,7 +113,6 @@ const connectToMongoDB = async () => {
         return reject(error);
       });
     } catch (error) {
-      client.close();
       return reject(error);
     }
   });
