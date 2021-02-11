@@ -44,8 +44,8 @@ const initLoading = async () => {
             connectorid: `connector-${mongodbcollection}`,
             connectorType: "FILE_UPLOAD",
             name: "JSON File Connector",
-            s3Bucket: dataBucket,
-            s3Path: folderName,
+            s3Bucket: s3Bucket,
+            s3Path: mongodbcollection,
             contentType: "application/json",
           },
         },
@@ -124,7 +124,7 @@ const loadDataToS3 = async (data) => {
     Body: JSON.stringify(data),
     Bucket: s3Bucket,
     ContentType: "application/json",
-    Key: `${collection}/${uuidv1.v1()}.json`,
+    Key: `${mongodbcollection}/${uuidv1.v1()}.json`,
   };
   await s3.upload(params).promise();
 };
