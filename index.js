@@ -33,15 +33,15 @@ const qrveyApiKey = config.apikey;
 const initLoading = async () => {
   return new Promise((resolve, reject) => {
     const data = {
-      datasetId: `ds_${collection}`,
+      datasetId: `ds_${mongodbcollection}`,
       metadataId: metadataId,
       datasources: [
         {
-          datasourceId: `dsource_${collection}`,
+          datasourceId: `dsource_${mongodbcollection}`,
           indexName: metadataId,
           dataConnection: {
-            appid: `appid-${collection}`,
-            connectorid: `connector-${collection}`,
+            appid: `appid-${mongodbcollection}`,
+            connectorid: `connector-${mongodbcollection}`,
             connectorType: "FILE_UPLOAD",
             name: "JSON File Connector",
             s3Bucket: dataBucket,
